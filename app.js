@@ -61,8 +61,12 @@ function reply_message(reply_token, msg) {
         replyToken: reply_token,
         messages: [
             {
-                "type": "text",
-                "text": msg
+                
+                "type": "image",
+                "originalContentUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/HP_logo_630x630.png",
+                "previewImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/HP_logo_630x630.png",
+                "animated": false
+                  
             }
         ]
     })
