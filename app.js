@@ -13,10 +13,7 @@ app.post('/webhook', (req, res) => {
     let msg = req.body.events[0].message.text
 
     if (msg == 'สวัสดี') {
-        {
-            "type": "text",
-            "text": "ดีจ้า"
-          };
+        msg == "ดีจ้า";
 
     } else if (msg == '1') {
         reply(reply_token, msg);
@@ -41,8 +38,8 @@ function reply(reply_token, msg) {
         messages: [
             {
                 type: 'sticker',
-                packageId: '1',
-                stickerId: '1',
+                packageId: '11537',
+                stickerId: '52002757',
             }
         ]
     })
