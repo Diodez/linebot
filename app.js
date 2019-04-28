@@ -6,7 +6,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
+  
 app.post('/webhook', async (req, res) => {
   res.sendStatus(200);
 });

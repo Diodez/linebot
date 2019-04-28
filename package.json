@@ -3,5 +3,24 @@
     "body-parser": "^1.19.0",
     "express": "^4.16.4",
     "request": "^2.88.0"
-  }
+  },
+  "name": "linebot",
+  "description": "Hi",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diodez/linebot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Diodez/linebot/issues"
+  },
+  "homepage": "https://github.com/Diodez/linebot#readme"
 }
