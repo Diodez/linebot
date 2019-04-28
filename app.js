@@ -30,11 +30,17 @@ function reply(reply_token, msg) {
     }
     let body = JSON.stringify({
         replyToken: reply_token,
-        messages: [{
-            "type": "sticker",
-            "packageId": "1",
-            "stickerId": "1"
-        }]
+        messages: [
+            {
+            type: 'text',
+            text: msg
+            },
+            {
+                type: 'sticker',
+                packageId: '1',
+                stickerId: '1'
+            }
+        ]
     })
     request.post({
         url: 'https://api.line.me/v2/bot/message/reply',
