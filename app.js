@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('/', async (req, res) => {
+app.get('/', async (req, res) => {
     res.send({
         test: "test"
     });
