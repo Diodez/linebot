@@ -14,6 +14,7 @@ app.post('/webhook', (req, res) => {
 
     if (msg == 'สวัสดี') {
         msg == "ดีจ้า";
+        reply_message(reply_token, msg);
 
     } else if (msg == '1') {
         reply(reply_token, msg);
