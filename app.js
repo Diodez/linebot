@@ -15,7 +15,10 @@ app.post('/webhook', (req, res) => {
     if (msg == 'สวัสดี') {
         msg = "ดีจ้า";
         reply(reply_token, msg);
-    } else {
+    } else if (msg == '1') {
+        reply_message(reply_token, 'Number');
+    }
+    else {
         reply_message(reply_token, msg);
     }
 
