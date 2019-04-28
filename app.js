@@ -13,7 +13,10 @@ app.post('/webhook', (req, res) => {
     let msg = req.body.events[0].message.text
 
     if (msg == 'สวัสดี') {
-        msg = "ดีจ้า";
+        {
+            "type": "text",
+            "text": "ดีจ้า"
+          };
 
     } else if (msg == '1') {
         reply(reply_token, msg);
