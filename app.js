@@ -11,6 +11,11 @@ app.use(bodyParser.json());
 app.post('/webhook', (req, res) => {
     let reply_token = req.body.events[0].replyToken
     let msg = req.body.events[0].message.text
+
+    if (msg == 'สวัสดี') {
+        msg = "ดีจ้า";
+    }
+    
     reply(reply_token, msg)
     res.sendStatus(200)
 });
