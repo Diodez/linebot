@@ -36,7 +36,7 @@ function reply(reply_token, msg) {
             {
                 type: 'sticker',
                 packageId: '1',
-                stickerId: '2565',
+                stickerId: '1',
             }
         ]
     })
