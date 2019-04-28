@@ -20,7 +20,7 @@ app.post('/webhook', (req, res) => {
         reply(reply_token, msg);
     }
     else {
-        reply_message(reply_token, msg);
+        reply_photo(reply_token, msg);
     }
 
     res.sendStatus(200)
@@ -54,6 +54,33 @@ function reply(reply_token, msg) {
 }
 
 function reply_message(reply_token, msg) {
+    let headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer 0+X6YrX7OfP83ERqESsjptG6XVZ9XFJvtKWfI0npquj4lN9vG+UcJoVvEQF0muWn6nk74+BKqIKZVLYx2fttTQt8RlT5TASOicCHzx1W3KeT1q5ZwhBFbIWoF7hQOlErJTYN/FRynvINx4RRS7EhUAdB04t89/1O/w1cDnyilFU='
+    }
+    let body = JSON.stringify({
+        replyToken: reply_token,
+        messages: [
+            {
+                
+                
+                    "type": "text",
+                    "text": "ดีจ้า"
+                  
+                  
+            }
+        ]
+    })
+    request.post({
+        url: 'https://api.line.me/v2/bot/message/reply',
+        headers: headers,
+        body: body
+    }, (err, res, body) => {
+        console.log('status = ' + res.statusCode);
+    });
+}
+
+function reply_photo(reply_token, msg) {
     let headers = {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer 0+X6YrX7OfP83ERqESsjptG6XVZ9XFJvtKWfI0npquj4lN9vG+UcJoVvEQF0muWn6nk74+BKqIKZVLYx2fttTQt8RlT5TASOicCHzx1W3KeT1q5ZwhBFbIWoF7hQOlErJTYN/FRynvINx4RRS7EhUAdB04t89/1O/w1cDnyilFU='
